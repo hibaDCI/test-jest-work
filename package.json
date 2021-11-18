@@ -1,0 +1,59 @@
+{
+  "name": "autograding",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "prepare": "npm_config_yes=true npx husky install",
+    "preinstall": "npx github:DCI-EdTech/autograding-setup --no --lintingStringency=low"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "husky": "^7.0.1",
+    "jest": "^26.6.3",
+    "lint-staged": "^11.1.2",
+    "rewire": "^5.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-missing-end-of-source-newline": null
+    }
+  },
+  "eslintIgnore": [
+    "__tests__/*.js",
+    "jest.config.js"
+  ],
+  "lint-staged": {
+    "*.{js}": [
+      "npx eslint --cache"
+    ],
+    "*.css": "stylelint",
+    "*.scss": "stylelint --syntax=scss"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "rules": {
+      "no-console": "off",
+      "eol-last": "off",
+      "semi": "off",
+      "prefer-template": "off",
+      "no-unused-vars": "off",
+      "quotes": "off",
+      "no-trailing-spaces": "off"
+    }
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "tests": [
+    {
+      "name": "Task 1",
+      "setup": "npm install --ignore-scripts",
+      "run": "CI=true npm test -- __tests__/tasks.1.js",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Task 2",
+      "setup": "npm install --ignore-scripts",
+      "run": "CI=true npm test -- __tests__/tasks.2.js",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Task 3",
+      "setup": "npm install --ignore-scripts",
+      "run": "CI=true npm test -- __tests__/tasks.3.js",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Task 4",
+      "setup": "npm install --ignore-scripts",
+      "run": "CI=true npm test -- __tests__/tasks.4.js",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Task 5",
+      "setup": "npm install --ignore-scripts",
+      "run": "CI=true npm test -- __tests__/tasks.5.js",
+      "timeout": 10,
+      "points": 20
+    }
+  ]
+}
